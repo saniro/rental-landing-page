@@ -45,6 +45,15 @@
 					$stmt->bindParam(':contact_no', $contactno, PDO::PARAM_STR);
 					//$stmt->bindParam(':profile_picture', $profilepic, PDO::PARAM_STR);
 					$stmt->execute();
+					$last_id = $con->lastInsertId();
+
+					$query = "INSERT INTO rental_tbl (room_id, user_id, status) VALUES (:roomid, :user_id, 2)";
+					$stmt = $con->prepare($query);
+					$stmt->bindParam(':roomid', $roomid, PDO::PARAM_STR);
+					//$stmt->bindParam(':password', $password, PDO::PARAM_STR);
+					$stmt->bindParam(':user_id', $last_id, PDO::PARAM_STR);
+					//$stmt->bindParam(':profile_picture', $profilepic, PDO::PARAM_STR);
+					$stmt->execute();
 
 					$data = array("success" => "true", "message" => "Application has been sent.");
 					$output = json_encode($data);

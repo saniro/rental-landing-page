@@ -504,17 +504,15 @@
                     </div>
                     <div class="modal-body">
                       <center>
-                        <form>
                             <div class="form-group">  
-                              <button class="btn btn-primary" style="width:70%;"><a data-toggle="modal" href="#modaltenantlogin" style="font-weight:bold;text-decoration:none;color:white;">TENANT</a></button>
+                              <button class="btn btn-primary" style="width:70%;"><a id="btnTenant" data-toggle="modal" href="#modaltenantlogin" style="font-weight:bold;text-decoration:none;color:white;">TENANT</a></button>
                             </div>
                             <div class="form-group">  
-                              <button class="btn btn-primary" style="width:70%;"><a data-toggle="modal" href="#modalhostlogin" style="font-weight:bold;text-decoration:none;color:white;">HOST</a></button>
+                              <button class="btn btn-primary" style="width:70%;"><a id="btnHostLogin" style="font-weight:bold;text-decoration:none;color:white;">HOST</a></button>
                             </div>
                             <div class="form-group">  
-                              <button class="btn btn-primary" style="width:70%;"><a data-toggle="modal" href="#modaladminlogin" style="font-weight:bold;text-decoration:none;color:white;">ADMINISTRATOR</a></button>
+                              <button class="btn btn-primary" style="width:70%;"><a id="btnAdmin" data-toggle="modal" href="#modaladminlogin" style="font-weight:bold;text-decoration:none;color:white;">ADMINISTRATOR</a></button>
                             </div>
-                        </form>
                       </center>
                     </div>
                     <div class = "modal-footer">
@@ -527,9 +525,67 @@
 
 
 
-<!-- Modal 1 for login -->
+<!-- Modal 1 for host -->
+     
+    <div id = "modalhostlogin" class = "modal fade"  role = "dialog">
+        <div class = "modal-dialog">
+            <div class="modal-content">
+                <div class = "modal-header">
+                    <h4 class ="modal-title" style="margin-left:40%;"> LOGIN</h4> 
+                    <button type="button" class = "close" data-dismiss ="modal"> &times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label> Username: </label>
+                                <input type="text" class="form-control" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label> Password: </label>
+                                <input type="password" class="form-control" required="true">
+                            </div>
+                        </form>
+                    </div>
+                    <div class = "modal-footer">
+                        <button type="button" class = "btn btn-primary" data-dismiss = "modal">SUBMIT </button>
+                    <button type ="button" class = "btn btn-default" data-dismiss = "modal"> CLOSE </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal 1 for tenant -->
      
     <div id = "modaltenantlogin" class = "modal fade"  role = "dialog">
+        <div class = "modal-dialog">
+            <div class="modal-content">
+                <div class = "modal-header">
+                    <h4 class ="modal-title" style="margin-left:40%;"> LOGIN</h4> 
+                    <button type="button" class = "close" data-dismiss ="modal"> &times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label> Username: </label>
+                                <input type="text" class="form-control" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label> Password: </label>
+                                <input type="password" class="form-control" required="true">
+                            </div>
+                        </form>
+                    </div>
+                    <div class = "modal-footer">
+                        <button type="button" class = "btn btn-primary" data-dismiss = "modal">SUBMIT </button>
+                    <button type ="button" class = "btn btn-default" data-dismiss = "modal"> CLOSE </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal 1 for tenant -->
+     
+    <div id = "modaladminlogin" class = "modal fade"  role = "dialog">
         <div class = "modal-dialog">
             <div class="modal-content">
                 <div class = "modal-header">
@@ -579,6 +635,18 @@
 
         $(document).on('click', '#btnloginas', function(){
           $('#modalloginas').modal('show');
+        });
+
+        $(document).on('click', '#btnTenant', function(){
+          $('#modaltenantlogin').modal('show');
+        });
+
+        $(document).on('click', '#btnHostLogin', function(){
+          $('#modalhostlogin').modal('show');
+        });
+
+        $(document).on('click', '#btnAdmin', function(){
+          $('#modaladminlogin').modal('show');
         });
 
         // $(document).on('click', '#btnAsHost', function(){
