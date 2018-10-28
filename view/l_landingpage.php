@@ -25,6 +25,18 @@
     <!-- Custom styles for this template -->
     <link href="./dist/css/agency.min.css" rel="stylesheet">
 
+    <style type="text/css">
+      .modal-dialog{
+        overflow-y: initial !important;
+      }
+      .modal{
+        height:650px;
+        width: 950px;
+        overflow-y:auto;
+        margin-left: 200px;
+      }
+    </style>
+
   </head>
 
   <body id="page-top">
@@ -51,8 +63,8 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="modal" href="#modalloginas">Login</a>
+            <li class="nav-item" id="btnloginas">
+              <a class="nav-link">Login</a>
             </li>
           </ul>
         </div>
@@ -216,15 +228,15 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" id="" type="text" value="+639-21-246-1703" disabled="true">
+                    <input class="form-control" type="text" value="+639-21-246-1703" disabled="true">
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="" type="email" value="911-1111" disabled="true">
+                    <input class="form-control" type="email" value="911-1111" disabled="true">
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="" type="tel" value="rentalplatform@gmail.com" disabled="true">
+                    <input class="form-control" type="tel" value="rentalplatform@gmail.com" disabled="true">
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
@@ -264,6 +276,28 @@
 
     <!-- Portfolio Modals -->
 
+
+    
+
+    
+<!-- This is the Modal that will be called for read btn -->
+          <!-- <div id = "portfolioModal1" class = "modal fade"  role = "dialog">
+            <div class = "modal-dialog">
+
+              <div class="modal-content">
+                <div class = "modal-header">
+                  <button type="button" class = "close" data-dismiss ="modal"> &times;</button>
+                        <h4 class ="modal-title">  </h4>
+                      </div>
+                      <div class="modal-body"  id="apartment_detail">
+                       
+                      </div>
+                    </div>
+              </div>
+            </div> -->
+
+
+
     <!-- Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -277,7 +311,6 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body" id="apartment_detail">
-                  <!-- Project Details Go Here -->
                   
                 </div>
               </div>
@@ -473,13 +506,13 @@
                       <center>
                         <form>
                             <div class="form-group">  
-                              <button class="btn btn-primary" style="width:70%;"><a data-toggle="modal" href="#modallogin" id="" style="font-weight:bold;text-decoration:none;color:white;">TENANT</a></button>
+                              <button class="btn btn-primary" style="width:70%;"><a data-toggle="modal" href="#modaltenantlogin" style="font-weight:bold;text-decoration:none;color:white;">TENANT</a></button>
                             </div>
                             <div class="form-group">  
-                              <button class="btn btn-primary" style="width:70%;"><a data-toggle="modal" href="#modallogin" id="" style="font-weight:bold;text-decoration:none;color:white;">HOST</a></button>
+                              <button class="btn btn-primary" style="width:70%;"><a data-toggle="modal" href="#modalhostlogin" style="font-weight:bold;text-decoration:none;color:white;">HOST</a></button>
                             </div>
                             <div class="form-group">  
-                              <button class="btn btn-primary" style="width:70%;"><a data-toggle="modal" href="#modallogin" id="" style="font-weight:bold;text-decoration:none;color:white;">ADMINISTRATOR</a></button>
+                              <button class="btn btn-primary" style="width:70%;"><a data-toggle="modal" href="#modaladminlogin" style="font-weight:bold;text-decoration:none;color:white;">ADMINISTRATOR</a></button>
                             </div>
                         </form>
                       </center>
@@ -496,7 +529,7 @@
 
 <!-- Modal 1 for login -->
      
-    <div id = "modallogin" class = "modal fade"  role = "dialog">
+    <div id = "modaltenantlogin" class = "modal fade"  role = "dialog">
         <div class = "modal-dialog">
             <div class="modal-content">
                 <div class = "modal-header">
@@ -507,11 +540,11 @@
                         <form>
                             <div class="form-group">
                                 <label> Username: </label>
-                                <input id="" type="text" class="form-control" required="true">
+                                <input type="text" class="form-control" required="true">
                             </div>
                             <div class="form-group">
                                 <label> Password: </label>
-                                <input id="" type="password" class="form-control" required="true">
+                                <input type="password" class="form-control" required="true">
                             </div>
                         </form>
                     </div>
@@ -521,175 +554,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="./img/portfolio/01-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Explore</li>
-                    <li>Category: Graphic Design</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="./img/portfolio/03-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Finish</li>
-                    <li>Category: Identity</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="./img/portfolio/04-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Lines</li>
-                    <li>Category: Branding</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="./img/portfolio/05-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Southwest</li>
-                    <li>Category: Website Design</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="./img/portfolio/06-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Window</li>
-                    <li>Category: Photography</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
@@ -708,9 +572,27 @@
 
     <script type="text/javascript">
        $(document).ready(function() {
+
         $(document).on('click', '#btnHost', function(){
           $('#modalhost').modal('show');
         });
+
+        $(document).on('click', '#btnloginas', function(){
+          $('#modalloginas').modal('show');
+        });
+
+        // $(document).on('click', '#btnAsHost', function(){
+        //   $('#modallogin').modal('show');
+        // });
+
+        // $(document).on('click', '#btnAsTenant', function(){
+        //   $('#modallogin').modal('show');
+        // });
+
+        // $(document).on('click', '#btnAsAdmin', function(){
+        //   $('#modallogin').modal('show');
+        // });
+
         $(document).on('click', '#btnView', function(){
           var view_apartment_details = 'selected';
           var apartment_id = $(this).attr('data-id');
